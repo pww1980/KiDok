@@ -11,13 +11,13 @@ Webapplikation zur strukturierten Dokumentation von Kindeswohl, Uebergaben, Medi
 
 ## Offene Punkte (vor Entwicklungsstart klaeren)
 
-- [ ] Hosting: Hetzner VPS (empfohlen) oder anderer EU-Anbieter?
-- [ ] Datenbankversion: MySQL 8 oder MariaDB 10.6?
-- [ ] PDF-Bibliothek: DOMPDF (rein PHP) oder Snappy/wkhtmltopdf (besser fuer Diagramme)?
-- [ ] Monetarisierung: Freemium, Abo oder kostenlos mit Foerderung?
-- [ ] Integration hochkonflikteltern.de: eigenstaendige App oder Subdomaene?
-- [ ] Warnschwellen: Standardwerte (3/5 Meldungen, 50%-Muster) bestaetigen oder anpassen?
-- [ ] DSFA (Datenschutz-Folgenabschaetzung) beauftragen / durchfuehren
+- [x] Hosting: **Netcup VPS** – Deutschland, DSGVO-konform ✓
+- [x] Datenbankversion: **MySQL 8** ✓
+- [x] PDF-Bibliothek: **DOMPDF** (rein PHP, kein Systembinary noetig) ✓
+- [x] Monetarisierung: **Kostenlos, Spendenbasis** ✓
+- [x] Integration hochkonflikteltern.de: **Eigenstaendige App** ✓
+- [x] Warnschwellen: **Standardwerte beibehalten** (3/7 Tage gelb, 5/7 Tage rot, 50%-Muster orange) ✓
+- [x] DSFA: **Selbst erstellen** mit BSI/BfDI-Vorlagen ✓
 
 ---
 
@@ -25,7 +25,7 @@ Webapplikation zur strukturierten Dokumentation von Kindeswohl, Uebergaben, Medi
 
 ### 1.1 Projektsetup und Infrastruktur
 
-- [ ] Hetzner VPS bereitstellen (Deutschland, DSGVO-konform)
+- [ ] Netcup VPS bereitstellen (Deutschland, DSGVO-konform)
 - [ ] Nginx + PHP-FPM + MySQL konfigurieren
 - [ ] TLS 1.3 Zertifikat einrichten (Let's Encrypt oder kommerziell)
 - [ ] HSTS-Header setzen
@@ -125,7 +125,7 @@ Webapplikation zur strukturierten Dokumentation von Kindeswohl, Uebergaben, Medi
 
 ### 1.9 PDF-Export Basisversion (F-61a, F-63a, F-64a, F-64b, F-65a, F-66a)
 
-- [ ] DOMPDF oder Snappy/wkhtmltopdf einrichten
+- [ ] DOMPDF einrichten (`barryvdh/laravel-dompdf`)
 - [ ] Blade-Templates fuer PDF-Layouts erstellen
 - [ ] Deckblatt: Kindname, Zeitraum, Ersteller, Erstellungsdatum, SHA-256-Hash
 - [ ] Wasserzeichen: Nutzername + Datum (Graustufen 30%)
@@ -254,7 +254,7 @@ Webapplikation zur strukturierten Dokumentation von Kindeswohl, Uebergaben, Medi
 - [ ] Digitale PDF-Signierung via eIDAS
 - [ ] OCR-Import U-Heft (Vorsorgeuntersuchungen automatisch erkennen und eintragen)
 - [ ] KI-gestuetzte Berichts-Zusammenfassung (Opt-in)
-- [ ] Integration hochkonflikteltern.de (eigenstaendige App oder Subdomaene – offener Punkt)
+- [ ] Integration hochkonflikteltern.de (eigenstaendige App – Verlinkung / Co-Marketing)
 
 ### 3.2 Abnahme und Go-Live
 
